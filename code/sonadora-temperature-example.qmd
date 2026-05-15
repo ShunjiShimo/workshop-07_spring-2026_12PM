@@ -115,6 +115,7 @@ plot(temperature_model)
 ```{r}
 #| label: temperature-model-summary
 
+# summarize temperature model
 summary(temperature_model)
 
 ```
@@ -137,6 +138,7 @@ ggpredict(
   temperature_model,           # model object
   terms = "elevation_m[900]"   # predictor (in quotation marks) and predictor value in brackets
 )
+
 ```
 
 **At 900 m, the predicted temperature is 19.8 °C (95% CI: [19.6, 20.0]).**
@@ -169,6 +171,7 @@ ggplot(data = sonadora_sum,
   labs(x = "Elevation (m)",
        y = "Mean temperature (\U00B0 C)") +
   theme_bw()
+
 ```
 
 ### Creating a table with model coefficients, 95% confidence intervals, and more
@@ -176,7 +179,9 @@ ggplot(data = sonadora_sum,
 ```{r}
 #| label: temperature-model-table
 
+# creating a table summarizing model
 as_flextable(temperature_model)
+
 ```
 
 **END OF SONADORA EXAMPLE**
