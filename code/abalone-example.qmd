@@ -173,7 +173,7 @@ ggpredict(
 
 How would you interpret this?  
 
-**At pH = 8, the model predicts change in abalone shell surface area to be 5.36 [95% CI: 5.08, 5.64] (mm^2 d^-1^). **
+**At pH = 8, the model predicts change in abalone shell surface area to be 5.36 [95% CI: 5.08, 5.64] (mm^2 d^-1^).**
 
 ### Visualizing model predictions and data
 
@@ -208,6 +208,7 @@ ggplot(data = abalone_clean,
        y = expression("Change in shell area ("*mm^{2}~d^-1*")")) +
   # theme
   theme_minimal()
+
 ```
 
 ### Creating a table with model coefficients, 95% confidence intervals, and more
@@ -218,6 +219,7 @@ ggplot(data = abalone_clean,
 #| label: abalone-table
 
 as_flextable(abalone_model)
+
 ```
 
 **END OF ABALONE EXAMPLE**
